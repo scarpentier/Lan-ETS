@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3174C47A-4F85-4108-AF67-82347B0B9F2F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LanSoft</RootNamespace>
+    <AssemblyName>LanSoft</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>lanets.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>2E8E82301C2F5E0401115150AA6921C7D10CA52B</ManifestCertificateThumbprint>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+    <SignManifests>false</SignManifests>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>ftp://dev.spacebar.ca/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://dev.spacebar.ca/lansoft/</InstallUrl>
+    <SupportUrl>http://lanets.ca</SupportUrl>
+    <ProductName>LanSoft</ProductName>
+    <PublisherName>Lan ETS</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.htm</WebPage>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.6.3.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Program Files\MySQL\MySQL Connector Net 6.3.6\Assemblies\v2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSets\lanets2011.cs">
+      <DependentUpon>lanets2011.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\lanets2011.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lanets2011.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions.cs" />
+    <Compile Include="GamerNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GamerNotes.Designer.cs">
+      <DependentUpon>GamerNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GamerProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GamerProfile.Designer.cs">
+      <DependentUpon>GamerProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Databases.cs" />
+    <Compile Include="Helpers\Extensions.cs" />
+    <Compile Include="Helpers\Label.cs" />
+    <Compile Include="Helpers\Net.cs" />
+    <Compile Include="Helpers\Participants.cs" />
+    <Compile Include="Helpers\Prerequisites.cs" />
+    <Compile Include="Helpers\Singleton.cs" />
+    <Compile Include="Helpers\MySQL.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataObjects\Gamer.cs" />
+    <Compile Include="Panels\Caisse\CreateUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Caisse\CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Caisse\IdCraft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Caisse\IdCraft.Designer.cs">
+      <DependentUpon>IdCraft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Caisse\IdentificationRapide.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Caisse\IdentificationRapide.Designer.cs">
+      <DependentUpon>IdentificationRapide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Caisse\RechercheJoueur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Caisse\RechercheJoueur.Designer.cs">
+      <DependentUpon>RechercheJoueur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Config\Printers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Config\Printers.Designer.cs">
+      <DependentUpon>Printers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Joueur\RegistrationProcess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Joueur\RegistrationProcess.Designer.cs">
+      <DependentUpon>RegistrationProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Sécurité\Dortoir.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Sécurité\Dortoir.Designer.cs">
+      <DependentUpon>Dortoir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Passwordbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Passwordbox.Designer.cs">
+      <DependentUpon>Passwordbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="GamerNotes.resx">
+      <DependentUpon>GamerNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GamerProfile.resx">
+      <DependentUpon>GamerProfile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Caisse\CreateUser.resx">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Caisse\IdCraft.resx">
+      <DependentUpon>IdCraft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Caisse\IdentificationRapide.resx">
+      <DependentUpon>IdentificationRapide.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Caisse\RechercheJoueur.resx">
+      <DependentUpon>RechercheJoueur.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Config\Printers.resx">
+      <DependentUpon>Printers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Joueur\RegistrationProcess.resx">
+      <DependentUpon>RegistrationProcess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Sécurité\Dortoir.resx">
+      <DependentUpon>Dortoir.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Passwordbox.resx">
+      <DependentUpon>Passwordbox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DataSets\lanets2011.xsc">
+      <DependentUpon>lanets2011.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\lanets2011.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lanets2011.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\lanets2011.xss">
+      <DependentUpon>lanets2011.xsd</DependentUpon>
+    </None>
+    <Content Include="JOUEUR.lbx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lanets.ico" />
+    <Content Include="Resources\accept.png" />
+    <Content Include="Resources\application_form_edit.png" />
+    <Content Include="Resources\arrow_refresh_small.png" />
+    <Content Include="Resources\barcode scan.jpg" />
+    <Content Include="Resources\caisse.jpg" />
+    <None Include="Resources\disk.png" />
+    <Content Include="Resources\error.png" />
+    <Content Include="Resources\exclamation.png" />
+    <Content Include="Resources\help_icon.gif" />
+    <Content Include="Resources\icon-notes.png" />
+    <Content Include="Resources\Processus\Caisses\Caisse lente.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Processus\Caisses\Caisse rapide.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Processus\Caisses\Identifier VIP.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Processus\Caisses\Identifier visiteur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Processus\Caisses\Niveau 2\Accepter les conditions à la caisse.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Processus\Caisses\Niveau 2\Choisir une place.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Processus\Caisses\Niveau 2\Ouvrir le dossier d%27un joueur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Processus\Caisses\Niveau 2\Payer à la porte.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Processus\Caisses\Niveau 2\Remettre l%27indentification au participant.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Processus\Caisses\Niveau 2\Vérifier l%27identité du participant.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Processus\Sécurité\Dortoirs.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\QL500BS.jpg" />
+    <Content Include="Resources\question.png" />
+    <Content Include="Resources\success.png" />
+    <Content Include="Resources\ticket.PNG" />
+    <Content Include="Resources\unknown_portrait.jpg" />
+    <Content Include="Resources\warning.png" />
+    <Content Include="version history.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="bpac">
+      <Guid>{90359D74-B7D9-467F-B938-3883F4CAB582}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="MySql.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

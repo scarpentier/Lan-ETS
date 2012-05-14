@@ -1,0 +1,69 @@
+1.4
+- [Update] Classes et méthodes mieux définies
+- [Update] Mise à jour des connexion et du Data Access Layer pour refléter les changements fait à la BD pour le Lan ETS WCG 2010
+
+1.3.6.0
+- [Fix] Gère le payment_type 3
+- [BUG] Disablé le bouton modify
+
+1.3.5.2
+- [Fix] Peut aller se coucher même quand ton nom est null (genre periodik)
+
+1.3.5.1
+- [Fix] User admin affiché correctement
+
+1.3.5.0
+- [Update] Meilleure gestion des types de paiement étranges (Cheque, Arrangement, ...)
+
+1.3.4.0
+- [Update] Les non-joueurs peuvent avoir une place assignée
+
+1.3.3.0
+- [New] Possibilité de changer la date de naissance d'un joueur
+- [Update] Refactoring de la classe Gamer
+
+1.3.2.0
+- [Fix] Fix de mot de passe
+
+1.3.2.0
+- [Update] Ajout de comptes utilisateurs
+
+1.3.1.1
+- [Update] Ajouter l'IP de la machine quand on accepte les terms
+
+1.3.1.0
+- [New] Possibilité pour les participants d'accepter les terms à la caisse
+
+1.3.0.0
+- [Fix] On va arrêter de failer le déployment et packager le template du billet
+
+1.2.3.0
+- [Fix] Update du nouveau SDK de Brother
+
+1.2.2.0
+- [Update] Le processus d'impression de badge n'est pas arrêté si un bénévole n'a pas accepté les termes d'utilisation
+
+1.2.1.0
+- [New] Possibilité de réimprimer le badge d'un joueur
+
+1.2.0.1
+- [Fix] Modification du state de paiement seulement si le participant est un joueur
+
+1.2.0.0
+- [New] Ajout de menu pour voir les processus
+
+1.1.1.0
+- [Update] Focus sur les champs au loading des panels
+
+1.1.0.1
+- [Fix] Enlevé [nom] quand pour la première fois qu'on ouvre le panel des dortoirs
+- [Fix] Full row select pour les dortoirs
+
+1.1.0.0
+- [New] Support pour scanner le code des joueurs aux dortoirs (pu besoin de prendre/redonner leurs tags)
+
+1.0.6.1
+- [Fix] Apostrophes dans les nickname faisait un bug (et une possibilité de SQL injection)
+
+1.0.6.0
+- [New] Possibilité de changer le nickname/clan direct dans le dossier du joueur
